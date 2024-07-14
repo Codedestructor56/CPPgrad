@@ -1,0 +1,3 @@
+/home/richardM/CPPgrad/CMakeFiles/CPPgrad.dir
+/home/richardM/CPPgrad/CMakeFiles/edit_cache.dir
+/home/richardM/CPPgrad/CMakeFiles/rebuild_cache.dir
