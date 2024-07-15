@@ -7,6 +7,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/richardM/CPPgrad/src/*.
 set(OLD_GLOB
   "/home/richardM/CPPgrad/src/autograd.cpp"
   "/home/richardM/CPPgrad/src/main.cpp"
+  "/home/richardM/CPPgrad/src/mlp.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

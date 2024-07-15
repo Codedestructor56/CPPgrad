@@ -81,12 +81,12 @@ clean: CMakeFiles/CPPgrad.dir/clean
 CMakeFiles/CPPgrad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPPgrad.dir/build.make CMakeFiles/CPPgrad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPPgrad.dir/build.make CMakeFiles/CPPgrad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/richardM/CPPgrad/CMakeFiles --progress-num=1,2,3 "Built target CPPgrad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/richardM/CPPgrad/CMakeFiles --progress-num=1,2,3,4 "Built target CPPgrad"
 .PHONY : CMakeFiles/CPPgrad.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CPPgrad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/richardM/CPPgrad/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/richardM/CPPgrad/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CPPgrad.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/richardM/CPPgrad/CMakeFiles 0
 .PHONY : CMakeFiles/CPPgrad.dir/rule
