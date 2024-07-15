@@ -83,24 +83,10 @@ CMakeFiles/CPPgrad.dir/src/autograd.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CPPgrad.dir/src/autograd.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richardM/CPPgrad/src/autograd.cpp -o CMakeFiles/CPPgrad.dir/src/autograd.cpp.s
 
-CMakeFiles/CPPgrad.dir/src/main.cpp.o: CMakeFiles/CPPgrad.dir/flags.make
-CMakeFiles/CPPgrad.dir/src/main.cpp.o: src/main.cpp
-CMakeFiles/CPPgrad.dir/src/main.cpp.o: CMakeFiles/CPPgrad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/richardM/CPPgrad/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CPPgrad.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CPPgrad.dir/src/main.cpp.o -MF CMakeFiles/CPPgrad.dir/src/main.cpp.o.d -o CMakeFiles/CPPgrad.dir/src/main.cpp.o -c /home/richardM/CPPgrad/src/main.cpp
-
-CMakeFiles/CPPgrad.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CPPgrad.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richardM/CPPgrad/src/main.cpp > CMakeFiles/CPPgrad.dir/src/main.cpp.i
-
-CMakeFiles/CPPgrad.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CPPgrad.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richardM/CPPgrad/src/main.cpp -o CMakeFiles/CPPgrad.dir/src/main.cpp.s
-
 CMakeFiles/CPPgrad.dir/src/mlp.cpp.o: CMakeFiles/CPPgrad.dir/flags.make
 CMakeFiles/CPPgrad.dir/src/mlp.cpp.o: src/mlp.cpp
 CMakeFiles/CPPgrad.dir/src/mlp.cpp.o: CMakeFiles/CPPgrad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/richardM/CPPgrad/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CPPgrad.dir/src/mlp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/richardM/CPPgrad/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CPPgrad.dir/src/mlp.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CPPgrad.dir/src/mlp.cpp.o -MF CMakeFiles/CPPgrad.dir/src/mlp.cpp.o.d -o CMakeFiles/CPPgrad.dir/src/mlp.cpp.o -c /home/richardM/CPPgrad/src/mlp.cpp
 
 CMakeFiles/CPPgrad.dir/src/mlp.cpp.i: cmake_force
@@ -111,25 +97,40 @@ CMakeFiles/CPPgrad.dir/src/mlp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CPPgrad.dir/src/mlp.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richardM/CPPgrad/src/mlp.cpp -o CMakeFiles/CPPgrad.dir/src/mlp.cpp.s
 
+CMakeFiles/CPPgrad.dir/src/bindings.cpp.o: CMakeFiles/CPPgrad.dir/flags.make
+CMakeFiles/CPPgrad.dir/src/bindings.cpp.o: src/bindings.cpp
+CMakeFiles/CPPgrad.dir/src/bindings.cpp.o: CMakeFiles/CPPgrad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/richardM/CPPgrad/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CPPgrad.dir/src/bindings.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CPPgrad.dir/src/bindings.cpp.o -MF CMakeFiles/CPPgrad.dir/src/bindings.cpp.o.d -o CMakeFiles/CPPgrad.dir/src/bindings.cpp.o -c /home/richardM/CPPgrad/src/bindings.cpp
+
+CMakeFiles/CPPgrad.dir/src/bindings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CPPgrad.dir/src/bindings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richardM/CPPgrad/src/bindings.cpp > CMakeFiles/CPPgrad.dir/src/bindings.cpp.i
+
+CMakeFiles/CPPgrad.dir/src/bindings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CPPgrad.dir/src/bindings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richardM/CPPgrad/src/bindings.cpp -o CMakeFiles/CPPgrad.dir/src/bindings.cpp.s
+
 # Object files for target CPPgrad
 CPPgrad_OBJECTS = \
 "CMakeFiles/CPPgrad.dir/src/autograd.cpp.o" \
-"CMakeFiles/CPPgrad.dir/src/main.cpp.o" \
-"CMakeFiles/CPPgrad.dir/src/mlp.cpp.o"
+"CMakeFiles/CPPgrad.dir/src/mlp.cpp.o" \
+"CMakeFiles/CPPgrad.dir/src/bindings.cpp.o"
 
 # External object files for target CPPgrad
 CPPgrad_EXTERNAL_OBJECTS =
 
-CPPgrad: CMakeFiles/CPPgrad.dir/src/autograd.cpp.o
-CPPgrad: CMakeFiles/CPPgrad.dir/src/main.cpp.o
-CPPgrad: CMakeFiles/CPPgrad.dir/src/mlp.cpp.o
-CPPgrad: CMakeFiles/CPPgrad.dir/build.make
-CPPgrad: CMakeFiles/CPPgrad.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/richardM/CPPgrad/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CPPgrad"
+CPPgrad.so: CMakeFiles/CPPgrad.dir/src/autograd.cpp.o
+CPPgrad.so: CMakeFiles/CPPgrad.dir/src/mlp.cpp.o
+CPPgrad.so: CMakeFiles/CPPgrad.dir/src/bindings.cpp.o
+CPPgrad.so: CMakeFiles/CPPgrad.dir/build.make
+CPPgrad.so: /usr/lib/libpython3.12.so
+CPPgrad.so: CMakeFiles/CPPgrad.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/richardM/CPPgrad/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library CPPgrad.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CPPgrad.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/CPPgrad.dir/build: CPPgrad
+CMakeFiles/CPPgrad.dir/build: CPPgrad.so
 .PHONY : CMakeFiles/CPPgrad.dir/build
 
 CMakeFiles/CPPgrad.dir/clean:

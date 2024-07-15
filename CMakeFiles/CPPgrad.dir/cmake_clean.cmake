@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CPPgrad.dir/src/autograd.cpp.o"
   "CMakeFiles/CPPgrad.dir/src/autograd.cpp.o.d"
-  "CMakeFiles/CPPgrad.dir/src/main.cpp.o"
-  "CMakeFiles/CPPgrad.dir/src/main.cpp.o.d"
+  "CMakeFiles/CPPgrad.dir/src/bindings.cpp.o"
+  "CMakeFiles/CPPgrad.dir/src/bindings.cpp.o.d"
   "CMakeFiles/CPPgrad.dir/src/mlp.cpp.o"
   "CMakeFiles/CPPgrad.dir/src/mlp.cpp.o.d"
-  "CPPgrad"
   "CPPgrad.pdb"
+  "CPPgrad.so"
 )
 
 # Per-language clean rules from dependency scanning.

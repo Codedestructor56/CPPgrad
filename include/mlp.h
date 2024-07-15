@@ -3,6 +3,7 @@
 
 #include "autograd.h"
 #include <vector>
+#include <string>
 
 struct Neuron {
     public:
@@ -36,5 +37,7 @@ public:
 
     std::vector<Data> forward(const std::vector<Data>& inputs);
     void backward();
+
+    std::string summary();
 };
 #endif

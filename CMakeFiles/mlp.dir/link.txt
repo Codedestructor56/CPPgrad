@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -flto -shared  -o mlp.cpython-312-x86_64-linux-gnu.so CMakeFiles/mlp.dir/src/bindings.cpp.o CMakeFiles/mlp.dir/src/mlp.cpp.o CMakeFiles/mlp.dir/src/autograd.cpp.o

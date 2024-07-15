@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/richardM/CPPgrad/src/autograd.cpp" "CMakeFiles/CPPgrad.dir/src/autograd.cpp.o" "gcc" "CMakeFiles/CPPgrad.dir/src/autograd.cpp.o.d"
-  "/home/richardM/CPPgrad/src/bindings.cpp" "CMakeFiles/CPPgrad.dir/src/bindings.cpp.o" "gcc" "CMakeFiles/CPPgrad.dir/src/bindings.cpp.o.d"
-  "/home/richardM/CPPgrad/src/mlp.cpp" "CMakeFiles/CPPgrad.dir/src/mlp.cpp.o" "gcc" "CMakeFiles/CPPgrad.dir/src/mlp.cpp.o.d"
+  "/home/richardM/CPPgrad/src/autograd.cpp" "CMakeFiles/mlp.dir/src/autograd.cpp.o" "gcc" "CMakeFiles/mlp.dir/src/autograd.cpp.o.d"
+  "/home/richardM/CPPgrad/src/bindings.cpp" "CMakeFiles/mlp.dir/src/bindings.cpp.o" "gcc" "CMakeFiles/mlp.dir/src/bindings.cpp.o.d"
+  "/home/richardM/CPPgrad/src/mlp.cpp" "CMakeFiles/mlp.dir/src/mlp.cpp.o" "gcc" "CMakeFiles/mlp.dir/src/mlp.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
+#include <sstream>
 
 // Helper function to initialize weights with random values
 Data randomWeight() {
@@ -69,7 +70,18 @@ std::vector<Data> MLP::forward(const std::vector<Data>& inputs) {
 }
 
 void MLP::backward() {
-    for (Layer& layer : layers) {
+    for (Layer layer : layers) {
         layer.backward();
     }
+}
+
+std::string MLP::summary() {
+    std::ostringstream oss;
+    for (size_t i = 0; i < layers.size(); ++i) {
+        oss << "Layer " << i << ": " << layers[i].neurons.size() << " neurons\n";
+        for (size_t j = 0; j < layers[i].neurons.size(); ++j) {
+            oss << "  Neuron " << j << ": " << layers[i].neurons[j].weights.size() << " inputs\n";
+        }
+    }
+    return oss.str();
 }

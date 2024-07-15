@@ -54,12 +54,20 @@ int main() {
     MLP mlp(layer_sizes);
     std::vector<Data> mlp_output = mlp.forward(inputs);
     std::cout << "MLP Output:" << std::endl;
-    printVector(mlp_output);
-    mlp.backward();
-    std::cout << "MLP backward pass:" << std::endl;
+    std::cout << "mlp forward pass:" << std::endl;
+
     for (auto& output : mlp_output) {
         std::unordered_set<Data*> visited3;
         traverseGraph(&output, visited3);
+    }
+    
+    //mlp.layers[0].backward();    
+    printVector(mlp_output);
+    mlp.backward();
+    std::cout << "mlp backward pass:" << std::endl;
+    for (auto& output : mlp_output) {
+        std::unordered_set<Data*> visited4;
+        traverseGraph(&output, visited4);
     }
 
     return 0;
