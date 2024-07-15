@@ -28,7 +28,7 @@ This project is inspired by Andrej Karpathy's **micrograd**, providing a simple 
    mkdir build
    cd build
    cmake ..
-   make
+   make```
 
 
 # Features
