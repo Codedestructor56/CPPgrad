@@ -1,43 +1,66 @@
 #include <iostream>
 #include "autograd.h"
-#include <unordered_set>
 #include "mlp.h"
+#include <unordered_set>
+#include <vector>
 
 void printVector(const std::vector<Data>& vec) {
     for (const auto& data : vec) {
-        std::cout << data.getData() << " ";
+        std::cout << "Data: " << data.getData() << " \n";
+        std::cout << "Grad: " << data.getGrad() << " \n";
     }
     std::cout << std::endl;
 }
 
-int main() {
-    // Create a simple MLP with 3 layers
-    std::vector<int> layer_sizes = {3, 4, 2};  // 3 inputs, one hidden layer with 4 neurons, and 2 outputs
-    MLP mlp(layer_sizes);
-
-    // Create input data
-    std::vector<Data> inputs = { Data(1.0), Data(2.0), Data(3.0) };
-
-    // Forward pass through the network
-    std::vector<Data> outputs = mlp.forward(inputs);
-
-    // Print input values
-    std::cout << "Input values: ";
-    printVector(inputs);
-
-    // Print outputs of each layer
-    std::cout << "Outputs at each layer:" << std::endl;
-    std::vector<Data> layer_input = inputs;
-    for (size_t i = 0; i < mlp.layers.size(); ++i) {
-        std::vector<Data> layer_output = mlp.layers[i].forward(layer_input);
-        std::cout << "Layer " << i + 1 << ": ";
-        printVector(layer_output);
-        layer_input = layer_output;
+void traverseGraph(Data* node, std::unordered_set<Data*>& visited) {
+    if (!node || visited.find(node) != visited.end()) {
+        return;
     }
 
-    // Print final output
-    std::cout << "Final output: ";
-    printVector(outputs);
+    visited.insert(node);
+    std::cout << "Node data: " << node->getData() << ", Grad: " << node->getGrad() << std::endl;
+
+    for (Data* child : node->getChildren()) {
+        std::cout << "    " << node->getData() << " -> " << child->getData() << std::endl;
+        traverseGraph(child, visited);
+    }
+}
+
+int main() {
+    // Demonstrate a Neuron
+    Neuron neuron(3);
+    std::vector<Data> inputs = {Data(1.0), Data(2.0), Data(3.0)};
+    Data neuron_output = neuron.forward(inputs);
+    std::cout << "Neuron Output: " << neuron_output.getData() << std::endl;
+    neuron_output.backward();
+    std::cout << "Neuron backward pass:" << std::endl;
+    std::unordered_set<Data*> visited1;
+    traverseGraph(&neuron_output, visited1);
+
+    // Demonstrate a Layer
+    Layer layer(2, 3);
+    std::vector<Data> layer_output = layer.forward(inputs);
+    std::cout << "Layer Output:" << std::endl;
+    printVector(layer_output);
+    layer.backward();
+    std::cout << "Layer backward pass:" << std::endl;
+    for (auto& output : layer_output) {
+        std::unordered_set<Data*> visited2;
+        traverseGraph(&output, visited2);
+    }
+
+    // Demonstrate an MLP
+    std::vector<int> layer_sizes = {3, 2, 1}; // 3 inputs, 1 hidden layer with 2 neurons, 1 output neuron
+    MLP mlp(layer_sizes);
+    std::vector<Data> mlp_output = mlp.forward(inputs);
+    std::cout << "MLP Output:" << std::endl;
+    printVector(mlp_output);
+    mlp.backward();
+    std::cout << "MLP backward pass:" << std::endl;
+    for (auto& output : mlp_output) {
+        std::unordered_set<Data*> visited3;
+        traverseGraph(&output, visited3);
+    }
 
     return 0;
 }

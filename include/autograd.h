@@ -42,7 +42,13 @@ public:
     static Data swish(const double& value);
     Data gelu() const;
     static Data gelu(const double& value);
+    
+    void addChild(Data* child) {
+        children.push_back(child);
+    }
 
+    Data& operator+=(const Data& other);
+    Data& operator*=(const Data& other);
     vector<Data*> getChildren() const { return children; }
     void backward();
     function<void()> _backward;

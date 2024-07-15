@@ -5,12 +5,16 @@
 #include <vector>
 
 struct Neuron {
-    std::vector<Data> weights;
-    Data bias;
+    public:
+      std::vector<Data> weights;
+      Data bias;
+      
+      Data result;
+      Neuron(int num_inputs);
 
-    Neuron(int num_inputs);
+      Data forward(const std::vector<Data>& inputs);
 
-    Data forward(const std::vector<Data>& inputs);
+      Data backward();
 };
 
 class Layer {
@@ -20,6 +24,8 @@ public:
     Layer(int num_neurons, int num_inputs_per_neuron);
 
     std::vector<Data> forward(const std::vector<Data>& inputs);
+
+    void backward();
 };
 
 class MLP {
@@ -29,6 +35,6 @@ public:
     MLP(const std::vector<int>& layer_sizes);
 
     std::vector<Data> forward(const std::vector<Data>& inputs);
+    void backward();
 };
 #endif
-
