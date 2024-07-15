@@ -23,25 +23,32 @@ This project is inspired by Andrej Karpathy's **micrograd**, providing a simple 
    git clone <repository-url>
    cd CPPgrad
 
+
+
 2. Create a build directory, and just run the following commands:
-  ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make``````
 
+<pre><code>
+mkdir build
+cd build
+cmake ..
+make
+</code></pre>
 
-# Features
+<h2>Features</h2>
 
-- **Automatic Differentiation**: Supports basic operations (+, *, -, /) and computes gradients using backpropagation.
-- **Custom Activation Functions**: Implementations of sigmoid, ReLU, tanh, swish, and gelu.
-- **Flexible Architecture**: Easily create multi-layer perceptrons by specifying the number of neurons in each layer.
+<ul>
+  <li><strong>Automatic Differentiation</strong>: Supports basic operations (+, *, -, /) and computes gradients using backpropagation.</li>
+  <li><strong>Custom Activation Functions</strong>: Implementations of sigmoid, ReLU, tanh, swish, and gelu.</li>
+  <li><strong>Flexible Architecture</strong>: Easily create multi-layer perceptrons by specifying the number of neurons in each layer.</li>
+</ul>
 
-# Future Improvements
+<h2>Future Improvements</h2>
 
-- Implement additional optimization algorithms.
-- Expand the functionality to include convolutional layers.
-- Create a more robust testing framework.
+<ul>
+  <li>Implement additional optimization algorithms.</li>
+  <li>Expand the functionality to include convolutional layers.</li>
+  <li>Create a more robust testing framework.</li>
+</ul>
 
 
 
