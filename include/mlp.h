@@ -12,9 +12,12 @@ struct Neuron {
       
       Data result;
       Neuron(int num_inputs);
-
+      
       Data forward(const std::vector<Data>& inputs);
-
+      
+      std::vector<Data> getWeights(){
+        return weights;
+      }
       Data backward();
 };
 
@@ -25,7 +28,10 @@ public:
     Layer(int num_neurons, int num_inputs_per_neuron);
 
     std::vector<Data> forward(const std::vector<Data>& inputs);
-
+    
+    std::vector<Neuron> getNeurons(){
+      return neurons;
+    }
     void backward();
 };
 
@@ -37,7 +43,9 @@ public:
 
     std::vector<Data> forward(const std::vector<Data>& inputs);
     void backward();
-
+    std::vector<Layer> getLayers(){
+      return layers;
+    } 
     std::string summary();
 };
 #endif

@@ -340,6 +340,6 @@ CMakeFiles/CPPgrad.dir/src/bindings.cpp.o: \
  /usr/include/c++/13.2.1/bits/gslice_array.h \
  /usr/include/c++/13.2.1/bits/mask_array.h \
  /usr/include/c++/13.2.1/bits/indirect_array.h \
- /home/richardM/CPPgrad/include/mlp.h \
+ /usr/include/pybind11/operators.h /home/richardM/CPPgrad/include/mlp.h \
  /home/richardM/CPPgrad/include/autograd.h \
  /home/richardM/CPPgrad/include/autograd.h

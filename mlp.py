@@ -23,21 +23,26 @@ def forward_pass(mlp, inputs):
 
 
 def compute_loss(predicted, actual):
-    loss = 0.0  # Initialize loss as a Data object
+    loss = CPPgrad.Data(0.0)  # Initialize loss as a Data object
     for p, a in zip(predicted, actual):
         if isinstance(p, CPPgrad.Data) and isinstance(a, CPPgrad.Data):
-            loss += (p.getData() - a.getData()) * (p.getData() - a.getData())
+            loss += (p - a) * (p - a)
         else:
             raise TypeError("Both predicted and actual must be CPPgrad.Data objects")
     return loss
-
+# Compute the loss (Mean Squared Error)
+def compute_loss(predicted, actual):
+    loss = CPPgrad.Data(0.0)
+    for p, a in zip(predicted, actual):
+        loss += (p - a) * (p - a)
+    return loss
 
 # Training loop
 epochs = 1000
 learning_rate = 0.01
 
 for epoch in range(epochs):
-    total_loss = 0.0
+    total_loss = CPPgrad.Data(0.0)
     for inputs, target in zip(X_data, y_data):
         # Forward pass
         outputs = forward_pass(mlp, inputs)
@@ -46,7 +51,6 @@ for epoch in range(epochs):
         loss = compute_loss(outputs, [target])
         total_loss += loss
         
-        loss = CPPgrad.Data(loss)
         # Backward pass
         loss.backward()
         
