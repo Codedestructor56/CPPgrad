@@ -4,7 +4,7 @@
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(mlp, m) {
+PYBIND11_MODULE(CPPgrad, m) {
     m.doc() = "MLP module"; 
     
    py::class_<Data>(m, "Data")
@@ -12,6 +12,8 @@ PYBIND11_MODULE(mlp, m) {
         .def(py::init<const double&, const std::vector<Data*>&>())
         .def("getGrad", &Data::getGrad)
         .def("setGrad", &Data::setGrad)
+        .def("getData", &Data::getData)
+        .def("setData", &Data::setData)
         .def("sigmoid", (Data (Data::*)() const) &Data::sigmoid) 
         .def("backward", &Data::backward);
     py::class_<Neuron>(m, "Neuron")

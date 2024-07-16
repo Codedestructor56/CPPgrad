@@ -1,4 +1,4 @@
-import mlp
+import CPPgrad
 
-data = mlp.Data(3.14)
+data = CPPgrad.Data(3.14)
 print("Data:", data.getData())
