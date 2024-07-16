@@ -306,6 +306,40 @@ CMakeFiles/CPPgrad.dir/src/bindings.cpp.o: \
  /usr/include/pybind11/detail/init.h /usr/include/pybind11/gil.h \
  /usr/include/c++/13.2.1/cassert \
  /usr/include/pybind11/gil_safe_call_once.h \
- /usr/include/pybind11/typing.h /home/richardM/CPPgrad/include/mlp.h \
+ /usr/include/pybind11/typing.h /usr/include/pybind11/stl.h \
+ /usr/include/c++/13.2.1/deque /usr/include/c++/13.2.1/bits/stl_deque.h \
+ /usr/include/c++/13.2.1/bits/deque.tcc /usr/include/c++/13.2.1/list \
+ /usr/include/c++/13.2.1/bits/stl_list.h \
+ /usr/include/c++/13.2.1/bits/list.tcc /usr/include/c++/13.2.1/map \
+ /usr/include/c++/13.2.1/bits/stl_tree.h \
+ /usr/include/c++/13.2.1/bits/stl_map.h \
+ /usr/include/c++/13.2.1/bits/stl_multimap.h \
+ /usr/include/c++/13.2.1/ostream /usr/include/c++/13.2.1/ios \
+ /usr/include/c++/13.2.1/bits/basic_ios.h \
+ /usr/include/c++/13.2.1/bits/locale_facets.h \
+ /usr/include/c++/13.2.1/cwctype /usr/include/wctype.h \
+ /usr/include/bits/wctype-wchar.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/13.2.1/bits/locale_facets.tcc \
+ /usr/include/c++/13.2.1/bits/basic_ios.tcc \
+ /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/set \
+ /usr/include/c++/13.2.1/bits/stl_set.h \
+ /usr/include/c++/13.2.1/bits/stl_multiset.h \
+ /usr/include/c++/13.2.1/valarray /usr/include/c++/13.2.1/algorithm \
+ /usr/include/c++/13.2.1/bits/stl_algo.h \
+ /usr/include/c++/13.2.1/bits/algorithmfwd.h \
+ /usr/include/c++/13.2.1/bits/stl_heap.h \
+ /usr/include/c++/13.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/13.2.1/bits/valarray_array.h \
+ /usr/include/c++/13.2.1/bits/valarray_array.tcc \
+ /usr/include/c++/13.2.1/bits/valarray_before.h \
+ /usr/include/c++/13.2.1/bits/slice_array.h \
+ /usr/include/c++/13.2.1/bits/valarray_after.h \
+ /usr/include/c++/13.2.1/bits/gslice.h \
+ /usr/include/c++/13.2.1/bits/gslice_array.h \
+ /usr/include/c++/13.2.1/bits/mask_array.h \
+ /usr/include/c++/13.2.1/bits/indirect_array.h \
+ /home/richardM/CPPgrad/include/mlp.h \
  /home/richardM/CPPgrad/include/autograd.h \
  /home/richardM/CPPgrad/include/autograd.h

@@ -1,4 +1,5 @@
 #include <pybind11/pybind11.h>
+#include <pybind11/stl.h>
 #include "mlp.h"
 #include "autograd.h"
 
@@ -6,16 +7,17 @@ namespace py = pybind11;
 
 PYBIND11_MODULE(CPPgrad, m) {
     m.doc() = "MLP module"; 
-    
-   py::class_<Data>(m, "Data")
+
+    py::class_<Data>(m, "Data")
         .def(py::init<const double&>())
         .def(py::init<const double&, const std::vector<Data*>&>())
         .def("getGrad", &Data::getGrad)
         .def("setGrad", &Data::setGrad)
         .def("getData", &Data::getData)
         .def("setData", &Data::setData)
-        .def("sigmoid", (Data (Data::*)() const) &Data::sigmoid) 
+        .def("sigmoid", (Data (Data::*)() const) &Data::sigmoid)
         .def("backward", &Data::backward);
+        
     py::class_<Neuron>(m, "Neuron")
         .def(py::init<int>())
         .def("forward", &Neuron::forward)
