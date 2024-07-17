@@ -3,12 +3,14 @@
 
 #include <functional>
 #include <vector>
+
 using namespace std;
 
 class Data {
 public:
     Data(const double& data);
     Data(const double& data, const vector<Data*>& children);
+    ~Data(){};
     double getData() const;
     double getGrad() const;
     void setGrad(const double& grad);
