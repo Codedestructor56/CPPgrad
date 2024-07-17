@@ -3,10 +3,12 @@
 
 #include <functional>
 #include <vector>
+#include <memory>
+#include <cstdlib>
 
 using namespace std;
 
-class Data {
+class Data: public enable_shared_from_this<Data>  {
 public:
     Data(const double& data);
     Data(const double& data, const vector<Data*>& children);
@@ -32,7 +34,8 @@ public:
     friend Data operator^(const double& value, const Data& obj);
     friend Data operator-(const double& value, const Data& obj);
     friend Data operator/(const double& value, const Data& obj);
-
+  
+      
     // Activation functions
     Data sigmoid() const;
     static Data sigmoid(const double& value);

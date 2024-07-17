@@ -2,6 +2,7 @@
 #include <pybind11/stl.h>
 #include <pybind11/operators.h>
 #include "mlp.h"
+#include <memory>
 #include "autograd.h"
 
 namespace py = pybind11;
@@ -9,7 +10,7 @@ namespace py = pybind11;
 PYBIND11_MODULE(CPPgrad, m) {
     m.doc() = "MLP module"; 
 
-    py::class_<Data>(m, "Data")
+    py::class_<Data,std::shared_ptr<Data>>(m, "Data")
         .def(py::init<const double&>())
         .def(py::init<const double&, const std::vector<Data*>&>())
         .def("getGrad", &Data::getGrad)
